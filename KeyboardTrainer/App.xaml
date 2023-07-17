@@ -4,6 +4,59 @@
              xmlns:local="clr-namespace:KeyboardTrainer"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- общий стиль кнопок (отступ, рамка, при наведении курсора) -->
+        <Style x:Key="StyleButton" TargetType="Button">
+            <Setter Property="Margin" Value="2,5"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15" 
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="2"
+                                BorderBrush="Black">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#A1A1A1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#FFD22121"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- цвета кнопок -->
+        <Style x:Key="ColorButtonCoral" TargetType="Button" BasedOn="{StaticResource StyleButton}">
+            <Setter Property="Background" Value="#FFF07795"/>
+        </Style>
+        <Style x:Key="ColorButtonYellow" TargetType="Button" BasedOn="{StaticResource StyleButton}">
+            <Setter Property="Background" Value="#FFE6F077"/>
+        </Style>
+        <Style x:Key="ColorButtonGreen" TargetType="Button" BasedOn="{StaticResource StyleButton}">
+            <Setter Property="Background" Value="#FF7FF077"/>
+        </Style>
+        <Style x:Key="ColorButtonBlue" TargetType="Button" BasedOn="{StaticResource StyleButton}">
+            <Setter Property="Background" Value="#FF77BEF0"/>
+        </Style>
+        <Style x:Key="ColorButtonPurple" TargetType="Button" BasedOn="{StaticResource StyleButton}">
+            <Setter Property="Background" Value="#FFDB77F0"/>
+        </Style>
+        <Style x:Key="ColorButtonGrey" TargetType="Button" BasedOn="{StaticResource StyleButton}">
+            <Setter Property="Background" Value="#FFB5B5B5"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <!-- для пробела -->
+        <Style x:Key="ColorButtonOrange" TargetType="Button" BasedOn="{StaticResource StyleButton}">
+            <Setter Property="Background" Value="#FFA502"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
     </Application.Resources>
 </Application>
