@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:KeyboardTrainer"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!-- Стиль шрифта -->
+        <Style x:Key="TextFont" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
         <!-- общий стиль кнопок (отступ, рамка, при наведении курсора) -->
         <Style x:Key="StyleButton" TargetType="Button">
             <Setter Property="Margin" Value="2,5"/>

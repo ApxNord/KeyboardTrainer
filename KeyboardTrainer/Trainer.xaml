@@ -31,24 +31,24 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Grid.Row="0" Grid.Column="0">
+                <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TextFont}">
                     <Run>Скорость: </Run>
                     <Run></Run>
                     <Run></Run>
                 </TextBlock>
-                <TextBlock Grid.Row="0" Grid.Column="1">
+                <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TextFont}">
                     <Run>Ошибки: </Run>
                     <Run></Run>
                 </TextBlock>
                 <UniformGrid Grid.Row="0" Grid.Column="2">
-                    <TextBlock >
+                    <TextBlock  Style="{StaticResource TextFont}">
                         <Run>Длина слов: </Run>
                         <Run></Run>
                     </TextBlock>
                     <Slider/>
                 </UniformGrid>
                 <CheckBox Grid.Row="0" Grid.Column="3">
-                    Учет регистра
+                    <TextBlock  Style="{StaticResource TextFont}" Text="Учет регистра"/>
                 </CheckBox>
 
                 <Button Grid.Row="1" Grid.Column="2"/>
