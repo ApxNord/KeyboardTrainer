@@ -129,6 +129,36 @@
   <data name="D" xml:space="preserve">
     <value>d</value>
   </data>
+  <data name="D0" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="D1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="D2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="D3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="D4" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="D5" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="D6" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="D7" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="D8" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="D9" xml:space="preserve">
+    <value>9</value>
+  </data>
   <data name="E" xml:space="preserve">
     <value>e</value>
   </data>
@@ -161,6 +191,39 @@
   </data>
   <data name="O" xml:space="preserve">
     <value>o</value>
+  </data>
+  <data name="Oem1" xml:space="preserve">
+    <value>;</value>
+  </data>
+  <data name="Oem3" xml:space="preserve">
+    <value>`</value>
+  </data>
+  <data name="Oem5" xml:space="preserve">
+    <value>\</value>
+  </data>
+  <data name="Oem6" xml:space="preserve">
+    <value>]</value>
+  </data>
+  <data name="OemComma" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="OemMinus" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="OemOpenBrackets" xml:space="preserve">
+    <value>[</value>
+  </data>
+  <data name="OemPeriod" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="OemPlus" xml:space="preserve">
+    <value>=</value>
+  </data>
+  <data name="OemQuestion" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="OemQuotes" xml:space="preserve">
+    <value>'</value>
   </data>
   <data name="P" xml:space="preserve">
     <value>p</value>

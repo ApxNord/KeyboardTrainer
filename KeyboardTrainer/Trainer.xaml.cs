@@ -1,6 +1,9 @@
-﻿using System;
+﻿using KeyboardTrainer.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,9 +22,18 @@ namespace KeyboardTrainer
     /// </summary>
     public partial class Trainer : Window
     {
+        ResourceManager resManager;
         public Trainer()
         {
             InitializeComponent();
+            resManager = new ResourceManager("KeyboardTrainer.Properties.CharacterLower", Assembly.GetExecutingAssembly());
+            foreach (Grid items in KeyBoardGrid.Children)
+            {
+                foreach (Button button in items.Children)
+                {
+                    button.Content = resManager.GetString(button.Name);
+                }
+            }
         }
     }
 }

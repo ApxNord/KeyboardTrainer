@@ -22,7 +22,7 @@ namespace KeyboardTrainer.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class CharacterLower {
+    public class CharacterLower {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace KeyboardTrainer.Properties {
         ///   Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KeyboardTrainer.Properties.CharacterLower", typeof(CharacterLower).Assembly);
@@ -51,7 +51,7 @@ namespace KeyboardTrainer.Properties {
         ///   обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на a.
         /// </summary>
-        internal static string A {
+        public static string A {
             get {
                 return ResourceManager.GetString("A", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на b.
         /// </summary>
-        internal static string B {
+        public static string B {
             get {
                 return ResourceManager.GetString("B", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на c.
         /// </summary>
-        internal static string C {
+        public static string C {
             get {
                 return ResourceManager.GetString("C", resourceCulture);
             }
@@ -90,16 +90,106 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на d.
         /// </summary>
-        internal static string D {
+        public static string D {
             get {
                 return ResourceManager.GetString("D", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на 0.
+        /// </summary>
+        public static string D0 {
+            get {
+                return ResourceManager.GetString("D0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 1.
+        /// </summary>
+        public static string D1 {
+            get {
+                return ResourceManager.GetString("D1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 2.
+        /// </summary>
+        public static string D2 {
+            get {
+                return ResourceManager.GetString("D2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 3.
+        /// </summary>
+        public static string D3 {
+            get {
+                return ResourceManager.GetString("D3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 4.
+        /// </summary>
+        public static string D4 {
+            get {
+                return ResourceManager.GetString("D4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 5.
+        /// </summary>
+        public static string D5 {
+            get {
+                return ResourceManager.GetString("D5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 6.
+        /// </summary>
+        public static string D6 {
+            get {
+                return ResourceManager.GetString("D6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 7.
+        /// </summary>
+        public static string D7 {
+            get {
+                return ResourceManager.GetString("D7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 8.
+        /// </summary>
+        public static string D8 {
+            get {
+                return ResourceManager.GetString("D8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 9.
+        /// </summary>
+        public static string D9 {
+            get {
+                return ResourceManager.GetString("D9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на e.
         /// </summary>
-        internal static string E {
+        public static string E {
             get {
                 return ResourceManager.GetString("E", resourceCulture);
             }
@@ -108,7 +198,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на f.
         /// </summary>
-        internal static string F {
+        public static string F {
             get {
                 return ResourceManager.GetString("F", resourceCulture);
             }
@@ -117,7 +207,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на g.
         /// </summary>
-        internal static string G {
+        public static string G {
             get {
                 return ResourceManager.GetString("G", resourceCulture);
             }
@@ -126,7 +216,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на h.
         /// </summary>
-        internal static string H {
+        public static string H {
             get {
                 return ResourceManager.GetString("H", resourceCulture);
             }
@@ -135,7 +225,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на i.
         /// </summary>
-        internal static string I {
+        public static string I {
             get {
                 return ResourceManager.GetString("I", resourceCulture);
             }
@@ -144,7 +234,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на j.
         /// </summary>
-        internal static string J {
+        public static string J {
             get {
                 return ResourceManager.GetString("J", resourceCulture);
             }
@@ -153,7 +243,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на k.
         /// </summary>
-        internal static string K {
+        public static string K {
             get {
                 return ResourceManager.GetString("K", resourceCulture);
             }
@@ -162,7 +252,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на l.
         /// </summary>
-        internal static string L {
+        public static string L {
             get {
                 return ResourceManager.GetString("L", resourceCulture);
             }
@@ -171,7 +261,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на m.
         /// </summary>
-        internal static string M {
+        public static string M {
             get {
                 return ResourceManager.GetString("M", resourceCulture);
             }
@@ -180,7 +270,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на n.
         /// </summary>
-        internal static string N {
+        public static string N {
             get {
                 return ResourceManager.GetString("N", resourceCulture);
             }
@@ -189,16 +279,115 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на o.
         /// </summary>
-        internal static string O {
+        public static string O {
             get {
                 return ResourceManager.GetString("O", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на ;.
+        /// </summary>
+        public static string Oem1 {
+            get {
+                return ResourceManager.GetString("Oem1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на `.
+        /// </summary>
+        public static string Oem3 {
+            get {
+                return ResourceManager.GetString("Oem3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на \.
+        /// </summary>
+        public static string Oem5 {
+            get {
+                return ResourceManager.GetString("Oem5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ].
+        /// </summary>
+        public static string Oem6 {
+            get {
+                return ResourceManager.GetString("Oem6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ,.
+        /// </summary>
+        public static string OemComma {
+            get {
+                return ResourceManager.GetString("OemComma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на -.
+        /// </summary>
+        public static string OemMinus {
+            get {
+                return ResourceManager.GetString("OemMinus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [.
+        /// </summary>
+        public static string OemOpenBrackets {
+            get {
+                return ResourceManager.GetString("OemOpenBrackets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ..
+        /// </summary>
+        public static string OemPeriod {
+            get {
+                return ResourceManager.GetString("OemPeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на =.
+        /// </summary>
+        public static string OemPlus {
+            get {
+                return ResourceManager.GetString("OemPlus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на /.
+        /// </summary>
+        public static string OemQuestion {
+            get {
+                return ResourceManager.GetString("OemQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &apos;.
+        /// </summary>
+        public static string OemQuotes {
+            get {
+                return ResourceManager.GetString("OemQuotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на p.
         /// </summary>
-        internal static string P {
+        public static string P {
             get {
                 return ResourceManager.GetString("P", resourceCulture);
             }
@@ -207,7 +396,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на q.
         /// </summary>
-        internal static string Q {
+        public static string Q {
             get {
                 return ResourceManager.GetString("Q", resourceCulture);
             }
@@ -216,7 +405,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на r.
         /// </summary>
-        internal static string R {
+        public static string R {
             get {
                 return ResourceManager.GetString("R", resourceCulture);
             }
@@ -225,7 +414,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на s.
         /// </summary>
-        internal static string S {
+        public static string S {
             get {
                 return ResourceManager.GetString("S", resourceCulture);
             }
@@ -234,7 +423,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на t.
         /// </summary>
-        internal static string T {
+        public static string T {
             get {
                 return ResourceManager.GetString("T", resourceCulture);
             }
@@ -243,7 +432,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на u.
         /// </summary>
-        internal static string U {
+        public static string U {
             get {
                 return ResourceManager.GetString("U", resourceCulture);
             }
@@ -252,7 +441,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на v.
         /// </summary>
-        internal static string V {
+        public static string V {
             get {
                 return ResourceManager.GetString("V", resourceCulture);
             }
@@ -261,7 +450,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на w.
         /// </summary>
-        internal static string W {
+        public static string W {
             get {
                 return ResourceManager.GetString("W", resourceCulture);
             }
@@ -270,7 +459,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на x.
         /// </summary>
-        internal static string X {
+        public static string X {
             get {
                 return ResourceManager.GetString("X", resourceCulture);
             }
@@ -279,7 +468,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на y.
         /// </summary>
-        internal static string Y {
+        public static string Y {
             get {
                 return ResourceManager.GetString("Y", resourceCulture);
             }
@@ -288,7 +477,7 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на z.
         /// </summary>
-        internal static string Z {
+        public static string Z {
             get {
                 return ResourceManager.GetString("Z", resourceCulture);
             }

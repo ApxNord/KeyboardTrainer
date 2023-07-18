@@ -97,6 +97,96 @@ namespace KeyboardTrainer.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на ).
+        /// </summary>
+        internal static string D0 {
+            get {
+                return ResourceManager.GetString("D0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на !.
+        /// </summary>
+        internal static string D1 {
+            get {
+                return ResourceManager.GetString("D1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на @.
+        /// </summary>
+        internal static string D2 {
+            get {
+                return ResourceManager.GetString("D2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на #.
+        /// </summary>
+        internal static string D3 {
+            get {
+                return ResourceManager.GetString("D3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на $.
+        /// </summary>
+        internal static string D4 {
+            get {
+                return ResourceManager.GetString("D4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на %.
+        /// </summary>
+        internal static string D5 {
+            get {
+                return ResourceManager.GetString("D5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ^.
+        /// </summary>
+        internal static string D6 {
+            get {
+                return ResourceManager.GetString("D6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &amp;.
+        /// </summary>
+        internal static string D7 {
+            get {
+                return ResourceManager.GetString("D7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на *.
+        /// </summary>
+        internal static string D8 {
+            get {
+                return ResourceManager.GetString("D8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на (.
+        /// </summary>
+        internal static string D9 {
+            get {
+                return ResourceManager.GetString("D9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на E.
         /// </summary>
         internal static string E {
@@ -192,6 +282,105 @@ namespace KeyboardTrainer.Properties {
         internal static string O {
             get {
                 return ResourceManager.GetString("O", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на :.
+        /// </summary>
+        internal static string Oem1 {
+            get {
+                return ResourceManager.GetString("Oem1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ~.
+        /// </summary>
+        internal static string Oem3 {
+            get {
+                return ResourceManager.GetString("Oem3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на |.
+        /// </summary>
+        internal static string Oem5 {
+            get {
+                return ResourceManager.GetString("Oem5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на }.
+        /// </summary>
+        internal static string Oem6 {
+            get {
+                return ResourceManager.GetString("Oem6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;.
+        /// </summary>
+        internal static string OemComma {
+            get {
+                return ResourceManager.GetString("OemComma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на _.
+        /// </summary>
+        internal static string OemMinus {
+            get {
+                return ResourceManager.GetString("OemMinus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на {.
+        /// </summary>
+        internal static string OemOpenBrackets {
+            get {
+                return ResourceManager.GetString("OemOpenBrackets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &gt;.
+        /// </summary>
+        internal static string OemPeriod {
+            get {
+                return ResourceManager.GetString("OemPeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на +.
+        /// </summary>
+        internal static string OemPlus {
+            get {
+                return ResourceManager.GetString("OemPlus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ?.
+        /// </summary>
+        internal static string OemQuestion {
+            get {
+                return ResourceManager.GetString("OemQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &quot;.
+        /// </summary>
+        internal static string OemQuotes {
+            get {
+                return ResourceManager.GetString("OemQuotes", resourceCulture);
             }
         }
         

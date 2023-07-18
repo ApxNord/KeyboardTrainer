@@ -58,7 +58,7 @@
         </Grid>
 
         <!-- блок расположения кнопок клавиатуры -->
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Name="KeyBoardGrid">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -121,8 +121,8 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Grid.Column="0" Name="Tab" Style="{DynamicResource ColorButtonGrey}" Content="Tab"/>
-                <Button Grid.Column="1" Name="Q" Style="{DynamicResource ColorButtonCoral}"/>
-                <Button Grid.Column="2" Name="W" Style="{DynamicResource ColorButtonYellow}"/>
+                <Button Grid.Column="1" Name="Q" Style="{DynamicResource ColorButtonCoral}" Tag="alpha"/>
+                <Button Grid.Column="2" Name="W" Style="{DynamicResource ColorButtonYellow}" Tag="alpha"/>
                 <Button Grid.Column="3" Name="E" Style="{DynamicResource ColorButtonGreen}"/>
                 <Button Grid.Column="4" Name="R" Style="{DynamicResource ColorButtonBlue}"/>
                 <Button Grid.Column="5" Name="T" Style="{DynamicResource ColorButtonBlue}"/>
