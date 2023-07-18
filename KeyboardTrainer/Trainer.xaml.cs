@@ -1,19 +1,10 @@
-﻿using KeyboardTrainer.Properties;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Reflection;
 using System.Resources;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace KeyboardTrainer
 {
@@ -22,12 +13,12 @@ namespace KeyboardTrainer
     /// </summary>
     public partial class Trainer : Window
     {
-        private ResourceManager _upperChar;
-        private ResourceManager _lowerChar;
+        private ResourceManager _upperChar; // файл ресурсов верхнего регистра
+        private ResourceManager _lowerChar; // файл ресурсов нижнего регистра
 
         private Dictionary<Button, Style> _originalStyle; // для сохранения изначального стиля кнопки
 
-        private bool IsCaps = false;
+        private bool IsCaps = false; // нажата ли клавиша CapsLock
         public Trainer()
         {
             InitializeComponent();
@@ -69,7 +60,6 @@ namespace KeyboardTrainer
             }
             if (e.Key == Key.LeftShift || e.Key == Key.RightShift || IsCaps)
                 ButtonContentInitialization(_upperChar);
-            Console.WriteLine(e.Key.ToString());
         }
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
