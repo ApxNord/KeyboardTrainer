@@ -79,11 +79,29 @@ namespace KeyboardTrainer.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на BackSpace.
+        /// </summary>
+        public static string BackSpace {
+            get {
+                return ResourceManager.GetString("BackSpace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на c.
         /// </summary>
         public static string C {
             get {
                 return ResourceManager.GetString("C", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Caps Lock.
+        /// </summary>
+        public static string CapsLock {
+            get {
+                return ResourceManager.GetString("CapsLock", resourceCulture);
             }
         }
         
@@ -196,6 +214,15 @@ namespace KeyboardTrainer.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Enter.
+        /// </summary>
+        public static string Enter {
+            get {
+                return ResourceManager.GetString("Enter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на f.
         /// </summary>
         public static string F {
@@ -255,6 +282,42 @@ namespace KeyboardTrainer.Properties {
         public static string L {
             get {
                 return ResourceManager.GetString("L", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Alt.
+        /// </summary>
+        public static string L_Alt {
+            get {
+                return ResourceManager.GetString("L_Alt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ctrl.
+        /// </summary>
+        public static string L_Ctrl {
+            get {
+                return ResourceManager.GetString("L_Ctrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Shift.
+        /// </summary>
+        public static string L_Shift {
+            get {
+                return ResourceManager.GetString("L_Shift", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Win.
+        /// </summary>
+        public static string L_Win {
+            get {
+                return ResourceManager.GetString("L_Win", resourceCulture);
             }
         }
         
@@ -412,6 +475,42 @@ namespace KeyboardTrainer.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Alt.
+        /// </summary>
+        public static string R_Alt {
+            get {
+                return ResourceManager.GetString("R_Alt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ctrl.
+        /// </summary>
+        public static string R_Ctrl {
+            get {
+                return ResourceManager.GetString("R_Ctrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Shift.
+        /// </summary>
+        public static string R_Shift {
+            get {
+                return ResourceManager.GetString("R_Shift", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Win.
+        /// </summary>
+        public static string R_Win {
+            get {
+                return ResourceManager.GetString("R_Win", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на s.
         /// </summary>
         public static string S {
@@ -426,6 +525,15 @@ namespace KeyboardTrainer.Properties {
         public static string T {
             get {
                 return ResourceManager.GetString("T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Tad.
+        /// </summary>
+        public static string Tab {
+            get {
+                return ResourceManager.GetString("Tab", resourceCulture);
             }
         }
         

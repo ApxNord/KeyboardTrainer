@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KeyboardTrainer"
         mc:Ignorable="d"
-        Title="Trainer" Height="600" Width="1200">
+        Title="Trainer" Height="600" Width="1200" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -18,7 +18,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
+
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -87,7 +87,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Grid.Column="0" Name="Oem3" Style="{DynamicResource ColorButtonCoral}"/>
-                <Button Grid.Column="1" Name="D1" Style="{DynamicResource ColorButtonCoral}"/>
+                <Button Grid.Column="1" Name="D1" Style="{StaticResource ColorButtonCoral}"/>
                 <Button Grid.Column="2" Name="D2" Style="{DynamicResource ColorButtonCoral}"/>
                 <Button Grid.Column="3" Name="D3" Style="{DynamicResource ColorButtonYellow}"/>
                 <Button Grid.Column="4" Name="D4" Style="{DynamicResource ColorButtonGreen}"/>
@@ -99,41 +99,42 @@
                 <Button Grid.Column="10" Name="D0" Style="{DynamicResource ColorButtonYellow}"/>
                 <Button Grid.Column="11" Name="OemMinus" Style="{DynamicResource ColorButtonGreen}"/>
                 <Button Grid.Column="12" Name="OemPlus" Style="{DynamicResource ColorButtonGreen}"/>
-                <Button Grid.Column="13" Name="BackSpace" Style="{DynamicResource ColorButtonGrey}" Content="BackSpace"/>
+                <Button Grid.Column="13" Name="BackSpace" Style="{DynamicResource ColorButtonGrey}"/>
             </Grid>
             <!-- вторая линия кнопок -->
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1.5*"/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="27*"/>
+                    <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0" Name="Tab" Style="{DynamicResource ColorButtonGrey}" Content="Tab"/>
-                <Button Grid.Column="1" Name="Q" Style="{DynamicResource ColorButtonCoral}" Tag="alpha"/>
-                <Button Grid.Column="2" Name="W" Style="{DynamicResource ColorButtonYellow}" Tag="alpha"/>
-                <Button Grid.Column="3" Name="E" Style="{DynamicResource ColorButtonGreen}"/>
-                <Button Grid.Column="4" Name="R" Style="{DynamicResource ColorButtonBlue}"/>
-                <Button Grid.Column="5" Name="T" Style="{DynamicResource ColorButtonBlue}"/>
-                <Button Grid.Column="6" Name="Y" Style="{DynamicResource ColorButtonPurple}"/>
-                <Button Grid.Column="7" Name="U" Style="{DynamicResource ColorButtonPurple}"/>
-                <Button Grid.Column="8" Name="I" Style="{DynamicResource ColorButtonCoral}"/>
-                <Button Grid.Column="9" Name="O" Style="{DynamicResource ColorButtonYellow}"/>
-                <Button Grid.Column="10" Name="P" Style="{DynamicResource ColorButtonGreen}"/>
-                <Button Grid.Column="11" Name="OemOpenBrackets" Style="{DynamicResource ColorButtonGreen}"/>
-                <Button Grid.Column="12" Name="Oem6" Style="{DynamicResource ColorButtonGreen}"/>
-                <Button Grid.Column="13" Name="Oem5" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="0" Name="Tab" Style="{DynamicResource ColorButtonGrey}" Margin="2,5,2,5"/>
+                <Button Grid.Column="1" Name="Q" Style="{DynamicResource ColorButtonCoral}" Margin="2,5,2,5"/>
+                <Button Grid.Column="2" Name="W" Style="{DynamicResource ColorButtonYellow}" Margin="2,5,2,5"/>
+                <Button Grid.Column="3" Name="E" Style="{DynamicResource ColorButtonGreen}" Margin="2,5,2,5"/>
+                <Button Grid.Column="4" Name="R" Style="{DynamicResource ColorButtonBlue}" Margin="2,5,2,5"/>
+                <Button Grid.Column="5" Name="T" Style="{DynamicResource ColorButtonBlue}" Margin="2,5,2,5"/>
+                <Button Grid.Column="6" Name="Y" Style="{DynamicResource ColorButtonPurple}" Margin="2,5,2,5"/>
+                <Button Grid.Column="7" Name="U" Style="{DynamicResource ColorButtonPurple}" Margin="2,5,2,5"/>
+                <Button Grid.Column="8" Name="I" Style="{DynamicResource ColorButtonCoral}" Margin="2,5,2,5"/>
+                <Button Grid.Column="9" Name="O" Style="{DynamicResource ColorButtonYellow}" Margin="2,5,2,5"/>
+                <Button Grid.Column="10" Name="P" Style="{DynamicResource ColorButtonGreen}" Margin="2,5,2,5"/>
+                <Button Grid.Column="11" Name="OemOpenBrackets" Style="{DynamicResource ColorButtonGreen}" Margin="2,5,2,5"/>
+                <Button Grid.Column="12" Name="Oem6" Style="{DynamicResource ColorButtonGreen}" Margin="2,5,2,5"/>
+                <Button Grid.Column="13" Name="Oem5" Style="{DynamicResource ColorButtonGreen}" Grid.ColumnSpan="2" Margin="2,5,2,5"/>
             </Grid>
             <!-- третья линия кнопок -->
             <Grid Grid.Row="2">
@@ -153,7 +154,7 @@
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0" Name="CapsLock" Style="{DynamicResource ColorButtonGrey}" Content="Caps Lock"/>
+                <Button Grid.Column="0" Name="CapsLock" Style="{DynamicResource ColorButtonGrey}"/>
                 <Button Grid.Column="1" Name="A" Style="{DynamicResource ColorButtonCoral}"/>
                 <Button Grid.Column="2" Name="S" Style="{DynamicResource ColorButtonYellow}"/>
                 <Button Grid.Column="3" Name="D" Style="{DynamicResource ColorButtonGreen}"/>
@@ -165,7 +166,7 @@
                 <Button Grid.Column="9" Name="L" Style="{DynamicResource ColorButtonYellow}"/>
                 <Button Grid.Column="10" Name="Oem1" Style="{DynamicResource ColorButtonGreen}"/>
                 <Button Grid.Column="11" Name="OemQuotes" Style="{DynamicResource ColorButtonGreen}"/>
-                <Button Grid.Column="12" Name="Enter" Style="{DynamicResource ColorButtonGrey}" Content="Enter"/>
+                <Button Grid.Column="12" Name="Enter" Style="{DynamicResource ColorButtonGrey}"/>
             </Grid>
             <!-- четвертая линия кнопок -->
             <Grid Grid.Row="3">
@@ -184,7 +185,7 @@
                     <ColumnDefinition Width="2.5*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0" Name="L_Shift" Style="{DynamicResource ColorButtonGrey}" Content="Shift"/>
+                <Button Grid.Column="0" Name="L_Shift" Style="{DynamicResource ColorButtonGrey}"/>
                 <Button Grid.Column="1" Name="Z" Style="{DynamicResource ColorButtonCoral}"/>
                 <Button Grid.Column="2" Name="X" Style="{DynamicResource ColorButtonYellow}"/>
                 <Button Grid.Column="3" Name="C" Style="{DynamicResource ColorButtonGreen}"/>
@@ -195,7 +196,7 @@
                 <Button Grid.Column="8" Name="OemComma" Style="{DynamicResource ColorButtonCoral}"/>
                 <Button Grid.Column="9" Name="OemPeriod" Style="{DynamicResource ColorButtonYellow}"/>
                 <Button Grid.Column="10" Name="OemQuestion" Style="{DynamicResource ColorButtonGreen}"/>
-                <Button Grid.Column="11" Name="R_Shift" Style="{DynamicResource ColorButtonGrey}" Content="Shift"/>
+                <Button Grid.Column="11" Name="R_Shift" Style="{DynamicResource ColorButtonGrey}"/>
             </Grid>
             <!-- пятая линия кнопок -->
             <Grid Grid.Row="4">
@@ -209,13 +210,13 @@
                     <ColumnDefinition Width="1.5*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0" Name="L_Ctrl" Style="{DynamicResource ColorButtonGrey}" Content="Ctrl"/>
-                <Button Grid.Column="1" Name="L_Win" Style="{DynamicResource ColorButtonGrey}" Content="Win"/>
-                <Button Grid.Column="2" Name="L_Alt" Style="{DynamicResource ColorButtonGrey}" Content="Alt"/>
+                <Button Grid.Column="0" Name="L_Ctrl" Style="{DynamicResource ColorButtonGrey}"/>
+                <Button Grid.Column="1" Name="L_Win" Style="{DynamicResource ColorButtonGrey}"/>
+                <Button Grid.Column="2" Name="L_Alt" Style="{DynamicResource ColorButtonGrey}"/>
                 <Button Grid.Column="3" Name="Space" Style="{DynamicResource ColorButtonOrange}"/>
-                <Button Grid.Column="4" Name="R_Alt" Style="{DynamicResource ColorButtonGrey}" Content="Alt"/>
-                <Button Grid.Column="5" Name="R_Win" Style="{DynamicResource ColorButtonGrey}" Content="Win"/>
-                <Button Grid.Column="6" Name="R_Ctrl" Style="{DynamicResource ColorButtonGrey}" Content="Ctrl"/>
+                <Button Grid.Column="4" Name="R_Alt" Style="{DynamicResource ColorButtonGrey}"/>
+                <Button Grid.Column="5" Name="R_Win" Style="{DynamicResource ColorButtonGrey}"/>
+                <Button Grid.Column="6" Name="R_Ctrl" Style="{DynamicResource ColorButtonGrey}"/>
             </Grid>
         </Grid>
     </Grid>

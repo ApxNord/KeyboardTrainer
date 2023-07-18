@@ -39,6 +39,10 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <!--стиль нажатой кнопки-->
+        <Style x:Key="PressButtonColor" TargetType="Button" BasedOn="{StaticResource StyleButton}">
+            <Setter Property="Background" Value="#FFD22121"/>
+        </Style>
         <!-- цвета кнопок -->
         <Style x:Key="ColorButtonCoral" TargetType="Button" BasedOn="{StaticResource StyleButton}">
             <Setter Property="Background" Value="#FFF07795"/>

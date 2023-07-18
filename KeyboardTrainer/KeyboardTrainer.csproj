@@ -102,6 +102,7 @@
     <EmbeddedResource Include="Properties\CharacterLower.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>CharacterLower.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\CharacterUpper.resx">
       <Generator>ResXFileCodeGenerator</Generator>
