@@ -123,13 +123,13 @@
   <data name="B" xml:space="preserve">
     <value>b</value>
   </data>
-  <data name="BackSpace" xml:space="preserve">
+  <data name="Back" xml:space="preserve">
     <value>BackSpace</value>
   </data>
   <data name="C" xml:space="preserve">
     <value>c</value>
   </data>
-  <data name="CapsLock" xml:space="preserve">
+  <data name="Capital" xml:space="preserve">
     <value>Caps Lock</value>
   </data>
   <data name="D" xml:space="preserve">
@@ -168,9 +168,6 @@
   <data name="E" xml:space="preserve">
     <value>e</value>
   </data>
-  <data name="Enter" xml:space="preserve">
-    <value>Enter</value>
-  </data>
   <data name="F" xml:space="preserve">
     <value>f</value>
   </data>
@@ -192,16 +189,16 @@
   <data name="L" xml:space="preserve">
     <value>l</value>
   </data>
-  <data name="L_Alt" xml:space="preserve">
+  <data name="LeftAlt" xml:space="preserve">
     <value>Alt</value>
   </data>
-  <data name="L_Ctrl" xml:space="preserve">
+  <data name="LeftCtrl" xml:space="preserve">
     <value>Ctrl</value>
   </data>
-  <data name="L_Shift" xml:space="preserve">
+  <data name="LeftShift" xml:space="preserve">
     <value>Shift</value>
   </data>
-  <data name="L_Win" xml:space="preserve">
+  <data name="LWin" xml:space="preserve">
     <value>Win</value>
   </data>
   <data name="M" xml:space="preserve">
@@ -255,16 +252,19 @@
   <data name="R" xml:space="preserve">
     <value>r</value>
   </data>
-  <data name="R_Alt" xml:space="preserve">
+  <data name="Return" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="RightAlt" xml:space="preserve">
     <value>Alt</value>
   </data>
-  <data name="R_Ctrl" xml:space="preserve">
+  <data name="RightCtrl" xml:space="preserve">
     <value>Ctrl</value>
   </data>
-  <data name="R_Shift" xml:space="preserve">
+  <data name="RightShift" xml:space="preserve">
     <value>Shift</value>
   </data>
-  <data name="R_Win" xml:space="preserve">
+  <data name="RWin" xml:space="preserve">
     <value>Win</value>
   </data>
   <data name="S" xml:space="preserve">

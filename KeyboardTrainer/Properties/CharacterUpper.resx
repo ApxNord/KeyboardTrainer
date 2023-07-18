@@ -123,8 +123,14 @@
   <data name="B" xml:space="preserve">
     <value>B</value>
   </data>
+  <data name="Back" xml:space="preserve">
+    <value>BackSpace</value>
+  </data>
   <data name="C" xml:space="preserve">
     <value>C</value>
+  </data>
+  <data name="Capital" xml:space="preserve">
+    <value>Caps Lock</value>
   </data>
   <data name="D" xml:space="preserve">
     <value>D</value>
@@ -183,6 +189,18 @@
   <data name="L" xml:space="preserve">
     <value>L</value>
   </data>
+  <data name="LeftAlt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="LeftCtrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="LeftShift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="LWin" xml:space="preserve">
+    <value>Win</value>
+  </data>
   <data name="M" xml:space="preserve">
     <value>M</value>
   </data>
@@ -234,11 +252,29 @@
   <data name="R" xml:space="preserve">
     <value>R</value>
   </data>
+  <data name="Return" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="RightAlt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="RightCtrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="RightShift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="RWin" xml:space="preserve">
+    <value>Win</value>
+  </data>
   <data name="S" xml:space="preserve">
     <value>S</value>
   </data>
   <data name="T" xml:space="preserve">
     <value>T</value>
+  </data>
+  <data name="Tab" xml:space="preserve">
+    <value>Tad</value>
   </data>
   <data name="U" xml:space="preserve">
     <value>U</value>

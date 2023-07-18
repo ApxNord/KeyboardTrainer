@@ -81,9 +81,9 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на BackSpace.
         /// </summary>
-        public static string BackSpace {
+        public static string Back {
             get {
-                return ResourceManager.GetString("BackSpace", resourceCulture);
+                return ResourceManager.GetString("Back", resourceCulture);
             }
         }
         
@@ -99,9 +99,9 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Caps Lock.
         /// </summary>
-        public static string CapsLock {
+        public static string Capital {
             get {
-                return ResourceManager.GetString("CapsLock", resourceCulture);
+                return ResourceManager.GetString("Capital", resourceCulture);
             }
         }
         
@@ -214,15 +214,6 @@ namespace KeyboardTrainer.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Enter.
-        /// </summary>
-        public static string Enter {
-            get {
-                return ResourceManager.GetString("Enter", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Ищет локализованную строку, похожую на f.
         /// </summary>
         public static string F {
@@ -288,36 +279,36 @@ namespace KeyboardTrainer.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Alt.
         /// </summary>
-        public static string L_Alt {
+        public static string LeftAlt {
             get {
-                return ResourceManager.GetString("L_Alt", resourceCulture);
+                return ResourceManager.GetString("LeftAlt", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Ctrl.
         /// </summary>
-        public static string L_Ctrl {
+        public static string LeftCtrl {
             get {
-                return ResourceManager.GetString("L_Ctrl", resourceCulture);
+                return ResourceManager.GetString("LeftCtrl", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Shift.
         /// </summary>
-        public static string L_Shift {
+        public static string LeftShift {
             get {
-                return ResourceManager.GetString("L_Shift", resourceCulture);
+                return ResourceManager.GetString("LeftShift", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Win.
         /// </summary>
-        public static string L_Win {
+        public static string LWin {
             get {
-                return ResourceManager.GetString("L_Win", resourceCulture);
+                return ResourceManager.GetString("LWin", resourceCulture);
             }
         }
         
@@ -475,38 +466,47 @@ namespace KeyboardTrainer.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Enter.
+        /// </summary>
+        public static string Return {
+            get {
+                return ResourceManager.GetString("Return", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Alt.
         /// </summary>
-        public static string R_Alt {
+        public static string RightAlt {
             get {
-                return ResourceManager.GetString("R_Alt", resourceCulture);
+                return ResourceManager.GetString("RightAlt", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Ctrl.
         /// </summary>
-        public static string R_Ctrl {
+        public static string RightCtrl {
             get {
-                return ResourceManager.GetString("R_Ctrl", resourceCulture);
+                return ResourceManager.GetString("RightCtrl", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Shift.
         /// </summary>
-        public static string R_Shift {
+        public static string RightShift {
             get {
-                return ResourceManager.GetString("R_Shift", resourceCulture);
+                return ResourceManager.GetString("RightShift", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Win.
         /// </summary>
-        public static string R_Win {
+        public static string RWin {
             get {
-                return ResourceManager.GetString("R_Win", resourceCulture);
+                return ResourceManager.GetString("RWin", resourceCulture);
             }
         }
         

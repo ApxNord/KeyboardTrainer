@@ -27,6 +27,7 @@ namespace KeyboardTrainer
 
         private Dictionary<Button, Style> _originalStyle; // для сохранения изначального стиля кнопки
 
+        private bool IsCaps = false;
         public Trainer()
         {
             InitializeComponent();
@@ -57,10 +58,18 @@ namespace KeyboardTrainer
                 foreach (Button button in b.Children)
                     if (e.Key.ToString() == button.Name)
                     {
-                        _originalStyle.Add(button, button.Style);
+                        if (!_originalStyle.ContainsKey(button))
+                            _originalStyle.Add(button, button.Style);
                         button.Style = (Style)Application.Current.Resources["PressButtonColor"];
                     }
 
+            if (e.Key == Key.Capital)
+            {
+                IsCaps = !IsCaps;
+            }
+            if (e.Key == Key.LeftShift || e.Key == Key.RightShift || IsCaps)
+                ButtonContentInitialization(_upperChar);
+            Console.WriteLine(e.Key.ToString());
         }
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
@@ -69,9 +78,12 @@ namespace KeyboardTrainer
                 foreach (Button button in b.Children)
                     if (e.Key.ToString() == button.Name)
                     {
+                        if (e.Key == Key.Capital && IsCaps) break;
                         button.Style = _originalStyle[button];
                         _originalStyle.Remove(button);
+                        break;
                     }
+            if (!IsCaps) ButtonContentInitialization(_lowerChar);
         }
     }
 }
