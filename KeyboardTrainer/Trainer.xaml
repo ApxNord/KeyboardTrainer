@@ -83,27 +83,28 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0"/>
-                <Button Grid.Column="1"/>
-                <Button Grid.Column="2"/>
-                <Button Grid.Column="3"/>
-                <Button Grid.Column="4"/>
-                <Button Grid.Column="5"/>
-                <Button Grid.Column="6"/>
-                <Button Grid.Column="7"/>
-                <Button Grid.Column="8"/>
-                <Button Grid.Column="9"/>
-                <Button Grid.Column="10"/>
-                <Button Grid.Column="11"/>
-                <Button Grid.Column="12"/>
-                <Button Grid.Column="13"/>
+                <Button Grid.Column="0" Style="{DynamicResource ColorButtonCoral}"/>
+                <Button Grid.Column="1" Style="{DynamicResource ColorButtonCoral}"/>
+                <Button Grid.Column="2" Style="{DynamicResource ColorButtonCoral}"/>
+                <Button Grid.Column="3" Style="{DynamicResource ColorButtonYellow}"/>
+                <Button Grid.Column="4" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="5" Style="{DynamicResource ColorButtonBlue}"/>
+                <Button Grid.Column="6" Style="{DynamicResource ColorButtonBlue}"/>
+                <Button Grid.Column="7" Style="{DynamicResource ColorButtonPurple}"/>
+                <Button Grid.Column="8" Style="{DynamicResource ColorButtonPurple}"/>
+                <Button Grid.Column="9" Style="{DynamicResource ColorButtonCoral}"/>
+                <Button Grid.Column="10" Style="{DynamicResource ColorButtonYellow}"/>
+                <Button Grid.Column="11" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="12" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="13" Style="{DynamicResource ColorButtonGrey}"/>
             </Grid>
             <!-- вторая линия кнопок -->
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -116,28 +117,28 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="1.5*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0"/>
-                <Button Grid.Column="1"/>
-                <Button Grid.Column="2"/>
-                <Button Grid.Column="3"/>
-                <Button Grid.Column="4"/>
-                <Button Grid.Column="5"/>
-                <Button Grid.Column="6"/>
-                <Button Grid.Column="7"/>
-                <Button Grid.Column="8"/>
-                <Button Grid.Column="9"/>
-                <Button Grid.Column="10"/>
-                <Button Grid.Column="11"/>
-                <Button Grid.Column="12"/>
-                <Button Grid.Column="13"/>
+                <Button Grid.Column="0" Style="{DynamicResource ColorButtonGrey}"/>
+                <Button Grid.Column="1" Style="{DynamicResource ColorButtonCoral}"/>
+                <Button Grid.Column="2" Style="{DynamicResource ColorButtonYellow}"/>
+                <Button Grid.Column="3" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="4" Style="{DynamicResource ColorButtonBlue}"/>
+                <Button Grid.Column="5" Style="{DynamicResource ColorButtonBlue}"/>
+                <Button Grid.Column="6" Style="{DynamicResource ColorButtonPurple}"/>
+                <Button Grid.Column="7" Style="{DynamicResource ColorButtonPurple}"/>
+                <Button Grid.Column="8" Style="{DynamicResource ColorButtonCoral}"/>
+                <Button Grid.Column="9" Style="{DynamicResource ColorButtonYellow}"/>
+                <Button Grid.Column="10" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="11" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="12" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="13" Style="{DynamicResource ColorButtonGreen}"/>
             </Grid>
             <!-- третья линия кнопок -->
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -149,27 +150,27 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0"/>
-                <Button Grid.Column="1"/>
-                <Button Grid.Column="2"/>
-                <Button Grid.Column="3"/>
-                <Button Grid.Column="4"/>
-                <Button Grid.Column="5"/>
-                <Button Grid.Column="6"/>
-                <Button Grid.Column="7"/>
-                <Button Grid.Column="8"/>
-                <Button Grid.Column="9"/>
-                <Button Grid.Column="10"/>
-                <Button Grid.Column="11"/>
-                <Button Grid.Column="12"/>
+                <Button Grid.Column="0" Style="{DynamicResource ColorButtonGrey}"/>
+                <Button Grid.Column="1" Style="{DynamicResource ColorButtonCoral}"/>
+                <Button Grid.Column="2" Style="{DynamicResource ColorButtonYellow}"/>
+                <Button Grid.Column="3" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="4" Style="{DynamicResource ColorButtonBlue}"/>
+                <Button Grid.Column="5" Style="{DynamicResource ColorButtonBlue}"/>
+                <Button Grid.Column="6" Style="{DynamicResource ColorButtonPurple}"/>
+                <Button Grid.Column="7" Style="{DynamicResource ColorButtonPurple}"/>
+                <Button Grid.Column="8" Style="{DynamicResource ColorButtonCoral}"/>
+                <Button Grid.Column="9" Style="{DynamicResource ColorButtonYellow}"/>
+                <Button Grid.Column="10" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="11" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="12" Style="{DynamicResource ColorButtonGrey}"/>
             </Grid>
             <!-- четвертая линия кнопок -->
             <Grid Grid.Row="3">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -180,42 +181,41 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2.5*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0"/>
-                <Button Grid.Column="1"/>
-                <Button Grid.Column="2"/>
-                <Button Grid.Column="3"/>
-                <Button Grid.Column="4"/>
-                <Button Grid.Column="5"/>
-                <Button Grid.Column="6"/>
-                <Button Grid.Column="7"/>
-                <Button Grid.Column="8"/>
-                <Button Grid.Column="9"/>
-                <Button Grid.Column="10"/>
-                <Button Grid.Column="11"/>
+                <Button Grid.Column="0" Style="{DynamicResource ColorButtonGrey}"/>
+                <Button Grid.Column="1" Style="{DynamicResource ColorButtonCoral}"/>
+                <Button Grid.Column="2" Style="{DynamicResource ColorButtonYellow}"/>
+                <Button Grid.Column="3" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="4" Style="{DynamicResource ColorButtonBlue}"/>
+                <Button Grid.Column="5" Style="{DynamicResource ColorButtonBlue}"/>
+                <Button Grid.Column="6" Style="{DynamicResource ColorButtonPurple}"/>
+                <Button Grid.Column="7" Style="{DynamicResource ColorButtonPurple}"/>
+                <Button Grid.Column="8" Style="{DynamicResource ColorButtonCoral}"/>
+                <Button Grid.Column="9" Style="{DynamicResource ColorButtonYellow}"/>
+                <Button Grid.Column="10" Style="{DynamicResource ColorButtonGreen}"/>
+                <Button Grid.Column="11" Style="{DynamicResource ColorButtonGrey}"/>
             </Grid>
             <!-- пятая линия кнопок -->
             <Grid Grid.Row="4">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="1.5*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0"/>
-                <Button Grid.Column="1"/>
-                <Button Grid.Column="2"/>
-                <Button Grid.Column="3"/>
-                <Button Grid.Column="4"/>
-                <Button Grid.Column="5"/>
-                <Button Grid.Column="6"/>
+                <Button Grid.Column="0" Style="{DynamicResource ColorButtonGrey}"/>
+                <Button Grid.Column="1" Style="{DynamicResource ColorButtonGrey}"/>
+                <Button Grid.Column="2" Style="{DynamicResource ColorButtonGrey}"/>
+                <Button Grid.Column="3" Style="{DynamicResource ColorButtonOrange}"/>
+                <Button Grid.Column="4" Style="{DynamicResource ColorButtonGrey}"/>
+                <Button Grid.Column="5" Style="{DynamicResource ColorButtonGrey}"/>
+                <Button Grid.Column="6" Style="{DynamicResource ColorButtonGrey}"/>
             </Grid>
         </Grid>
     </Grid>

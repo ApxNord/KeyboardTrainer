@@ -23,6 +23,8 @@ namespace KeyboardTrainer
         public MainWindow()
         {
             InitializeComponent();
+            Trainer t = new Trainer();
+            t.Show();
         }
     }
 }
