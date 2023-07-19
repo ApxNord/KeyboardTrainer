@@ -19,6 +19,8 @@ namespace KeyboardTrainer
         private Dictionary<Button, Style> _originalStyle; // для сохранения изначального стиля кнопки
 
         private bool IsCaps = false; // нажата ли клавиша CapsLock
+
+        public Statistic Stat { get; set; }
         public Trainer()
         {
             InitializeComponent();
@@ -27,6 +29,9 @@ namespace KeyboardTrainer
             ButtonContentInitialization(_lowerChar);
 
             _originalStyle = new Dictionary<Button, Style>();
+            Stat = new Statistic();
+            Stat.Diff = (int)slider.Value;
+            this.DataContext = this;
         }
         /// <summary>
         /// Для инициализации контента кнопок на форме Trainer.xaml
@@ -77,6 +82,12 @@ namespace KeyboardTrainer
                         }
                     }
             if (!IsCaps) ButtonContentInitialization(_lowerChar);
+        }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (Stat != null)
+                Stat.Diff = (int)((Slider)sender).Value;
         }
     }
 }

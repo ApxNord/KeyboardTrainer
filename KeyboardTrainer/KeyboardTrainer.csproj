@@ -65,6 +65,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CharacterUpper.resx</DependentUpon>
     </Compile>
+    <Compile Include="Statistic.cs" />
     <Compile Include="Trainer.xaml.cs">
       <DependentUpon>Trainer.xaml</DependentUpon>
     </Compile>

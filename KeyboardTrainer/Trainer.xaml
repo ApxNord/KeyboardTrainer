@@ -35,19 +35,19 @@
 
                 <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TextFont}">
                     <Run>Скорость: </Run>
-                    <Run></Run>
+                    <Run Text="{Binding Stat.Speed}"></Run>
                     <Run> символ/мин</Run>
                 </TextBlock>
                 <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TextFont}">
                     <Run>Ошибки: </Run>
-                    <Run></Run>
+                    <Run Text="{Binding Stat.Fails}"/>
                 </TextBlock>
                 <UniformGrid Grid.Row="0" Grid.Column="2">
                     <TextBlock  Style="{StaticResource TextFont}">
                         <Run>Длина слов: </Run>
-                        <Run></Run>
+                        <Run Text="{Binding Stat.Diff}"/>
                     </TextBlock>
-                    <Slider Minimum="3" SmallChange="1" Value="5"/>
+                    <Slider Name="slider" Minimum="3" SmallChange="1" Value="5" ValueChanged="Slider_ValueChanged"/>
                 </UniformGrid>
                 <CheckBox Grid.Row="0" Grid.Column="3">
                     <TextBlock  Style="{StaticResource TextFont}" Text="Учет регистра"/>
@@ -64,9 +64,11 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                
+
                 <TextBlock Grid.Row="0" Style="{StaticResource TextFont}"/>
-                <TextBox Grid.Row="1" Background="Transparent"/>
+                <TextBox Grid.Row="1" Background="Transparent" IsEnabled="False"
+                         BorderBrush="Transparent"
+                         FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
             </Grid>
         </Grid>
 
