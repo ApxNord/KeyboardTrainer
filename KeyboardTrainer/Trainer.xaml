@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="Trainer" Height="600" Width="1200" 
         KeyDown="Window_KeyDown" KeyUp="Window_KeyUp"
-        Background="#FFF6F6F6">
+        Background="#FFF6F6F6" WindowStartupLocation="CenterScreen" ForceCursor="True"
+        ResizeMode="NoResize"
+        >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -18,7 +20,7 @@
         <Grid Grid.Row="0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="1.5*"/>
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
@@ -32,7 +34,8 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-
+                
+                <!-- статистика и настройка тренажера -->
                 <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TextFont}">
                     <Run>Скорость: </Run>
                     <Run Text="{Binding Stat.Speed}"></Run>
@@ -54,21 +57,25 @@
                 </CheckBox>
 
                 <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource ColorButtonGrey}"
-                        Content="Start" FontSize="24" FontWeight="Bold" IsEnabled="True"/>
+                        Content="Start" FontSize="24" FontWeight="Bold" IsEnabled="True" Click="StartButton_Click"/>
                 <Button Grid.Row="1" Grid.Column="3" Style="{StaticResource ColorButtonGrey}"
                         Content="Stop" FontSize="24" FontWeight="Bold" IsEnabled="False" Background="Gainsboro" Foreground="#FFBBBBBB"/>
             </Grid>
-            <ProgressBar Grid.Row="1" Background="#FFE6F6F6"/>
+            
+            <!-- текстовые поля ввода и вывода -->
+            <ProgressBar Name="progress" Grid.Row="1" Background="#FFE6F6F6"/>
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Grid.Row="0" Style="{StaticResource TextFont}"/>
-                <TextBox Grid.Row="1" Background="Transparent" IsEnabled="False"
+                <TextBlock Name="OutputText" Grid.Row="0" Style="{StaticResource TextFont}"
+                           TextWrapping="Wrap" FontSize="20" VerticalAlignment="Center"/>
+                <TextBox Name="InputText" Grid.Row="1" Background="Transparent" IsEnabled="False"
                          BorderBrush="Transparent"
-                         FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+                         FontFamily="Arial" FontSize="18" FontWeight="Bold"
+                         VerticalAlignment="Center"/>
             </Grid>
         </Grid>
 

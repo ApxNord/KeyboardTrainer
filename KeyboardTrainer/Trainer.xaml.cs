@@ -89,5 +89,12 @@ namespace KeyboardTrainer
             if (Stat != null)
                 Stat.Diff = (int)((Slider)sender).Value;
         }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (OutputText != null) OutputText.Text = "";
+            OutputText.Text += Stat.GenerationRandomText();
+            progress.Maximum = OutputText.Text.Length;
+        }
     }
 }

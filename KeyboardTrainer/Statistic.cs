@@ -33,7 +33,7 @@ namespace KeyboardTrainer
                 OnPropertyChanged("Speed");
             }
         }
-        public int Fails 
+        public int Fails
         {
             get
             {
@@ -62,6 +62,22 @@ namespace KeyboardTrainer
         private void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public string GenerationRandomText()
+        {
+            int[] onlyLowerText = { 97, 123 };
+            Random random = new Random();
+            string text = string.Empty;
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < Diff; j++)
+                {
+                    text += (char)random.Next(onlyLowerText[0], onlyLowerText[1]);
+                }
+                text += " ";
+            }
+            return text;
         }
     }
 }
