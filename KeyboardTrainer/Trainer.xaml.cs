@@ -13,6 +13,8 @@ namespace KeyboardTrainer
     /// </summary>
     public partial class Trainer : Window
     {
+        int index = 0;
+
         private ResourceManager _upperChar; // файл ресурсов верхнего регистра
         private ResourceManager _lowerChar; // файл ресурсов нижнего регистра
 
@@ -50,6 +52,7 @@ namespace KeyboardTrainer
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
+            
             foreach (Grid b in KeyBoardGrid.Children)
                 foreach (Button button in b.Children)
                     if (e.Key.ToString() == button.Name)
@@ -57,6 +60,14 @@ namespace KeyboardTrainer
                         if (!_originalStyle.ContainsKey(button))
                             _originalStyle.Add(button, button.Style);
                         button.Style = (Style)Application.Current.Resources["PressButtonColor"];
+
+                        if (OutputText.Text[index] == char.Parse(button.Content.ToString()))
+                        {
+                            InputText.Text += button.Content.ToString();
+                            progress.Value+=0.5;
+                            index++;
+                        }
+                        break;
                     }
 
             if (e.Key == Key.Capital)
