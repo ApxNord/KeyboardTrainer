@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KeyboardTrainer"
         mc:Ignorable="d"
-        Title="Trainer" Height="600" Width="1200" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
+        Title="Trainer" Height="600" Width="1200" 
+        KeyDown="Window_KeyDown" KeyUp="Window_KeyUp"
+        Background="#FFF6F6F6">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -34,7 +36,7 @@
                 <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TextFont}">
                     <Run>Скорость: </Run>
                     <Run></Run>
-                    <Run></Run>
+                    <Run> символ/мин</Run>
                 </TextBlock>
                 <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TextFont}">
                     <Run>Ошибки: </Run>
@@ -45,16 +47,27 @@
                         <Run>Длина слов: </Run>
                         <Run></Run>
                     </TextBlock>
-                    <Slider/>
+                    <Slider Minimum="3" SmallChange="1" Value="5"/>
                 </UniformGrid>
                 <CheckBox Grid.Row="0" Grid.Column="3">
                     <TextBlock  Style="{StaticResource TextFont}" Text="Учет регистра"/>
                 </CheckBox>
 
-                <Button Grid.Row="1" Grid.Column="2"/>
-                <Button Grid.Row="1" Grid.Column="3"/>
+                <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource ColorButtonGrey}"
+                        Content="Start" FontSize="24" FontWeight="Bold" IsEnabled="True"/>
+                <Button Grid.Row="1" Grid.Column="3" Style="{StaticResource ColorButtonGrey}"
+                        Content="Stop" FontSize="24" FontWeight="Bold" IsEnabled="False" Background="Gainsboro" Foreground="#FFBBBBBB"/>
             </Grid>
-            <TextBlock Grid.Row="1"/>
+            <ProgressBar Grid.Row="1" Background="#FFE6F6F6"/>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <TextBlock Grid.Row="0" Style="{StaticResource TextFont}"/>
+                <TextBox Grid.Row="1" Background="Transparent"/>
+            </Grid>
         </Grid>
 
         <!-- блок расположения кнопок клавиатуры -->

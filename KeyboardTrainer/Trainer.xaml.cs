@@ -69,9 +69,12 @@ namespace KeyboardTrainer
                     if (e.Key.ToString() == button.Name)
                     {
                         if (e.Key == Key.Capital && IsCaps) break;
-                        button.Style = _originalStyle[button];
-                        _originalStyle.Remove(button);
-                        break;
+                        if (_originalStyle.ContainsKey(button))
+                        {
+                            button.Style = _originalStyle[button];
+                            _originalStyle.Remove(button);
+                            break;
+                        }
                     }
             if (!IsCaps) ButtonContentInitialization(_lowerChar);
         }
