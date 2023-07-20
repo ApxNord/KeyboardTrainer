@@ -270,6 +270,9 @@
   <data name="S" xml:space="preserve">
     <value>S</value>
   </data>
+  <data name="Space" xml:space="preserve">
+    <value> </value>
+  </data>
   <data name="T" xml:space="preserve">
     <value>T</value>
   </data>

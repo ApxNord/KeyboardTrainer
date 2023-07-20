@@ -520,6 +520,15 @@ namespace KeyboardTrainer.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на  .
+        /// </summary>
+        public static string Space {
+            get {
+                return ResourceManager.GetString("Space", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на t.
         /// </summary>
         public static string T {

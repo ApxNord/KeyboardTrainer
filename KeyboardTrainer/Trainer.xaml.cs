@@ -50,9 +50,21 @@ namespace KeyboardTrainer
             }
         }
 
-        private void Window_KeyDown(object sender, KeyEventArgs e)
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            
+            if (Stat != null)
+                Stat.Diff = (int)((Slider)sender).Value;
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            Space.Focus();
+            if (OutputText != null) OutputText.Text = "";
+            OutputText.Text += Stat.GenerationRandomText();
+        }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
             foreach (Grid b in KeyBoardGrid.Children)
                 foreach (Button button in b.Children)
                     if (e.Key.ToString() == button.Name)
@@ -78,7 +90,7 @@ namespace KeyboardTrainer
                 ButtonContentInitialization(_upperChar);
         }
 
-        private void Window_KeyUp(object sender, KeyEventArgs e)
+        private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
         {
             foreach (Grid b in KeyBoardGrid.Children)
                 foreach (Button button in b.Children)
@@ -93,19 +105,6 @@ namespace KeyboardTrainer
                         }
                     }
             if (!IsCaps) ButtonContentInitialization(_lowerChar);
-        }
-
-        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (Stat != null)
-                Stat.Diff = (int)((Slider)sender).Value;
-        }
-
-        private void StartButton_Click(object sender, RoutedEventArgs e)
-        {
-            Space.Focus();
-            if (OutputText != null) OutputText.Text = "";
-            OutputText.Text += Stat.GenerationRandomText();
         }
     }
 }
