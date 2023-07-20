@@ -5,18 +5,22 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <!-- Стиль шрифта -->
-        <Style x:Key="TextFont" TargetType="TextBlock">
-            <Setter Property="FontFamily" Value="Arial"/>
-            <Setter Property="FontSize" Value="18"/>
-            <Setter Property="FontWeight" Value="Bold"/>
+        <Style x:Key="TextFont">
+            <Setter Property="Control.FontFamily" Value="Arial"/>
+            <Setter Property="Control.FontSize" Value="18"/>
+            <Setter Property="Control.FontWeight" Value="Bold"/>
+        </Style>
+        <!-- Стиль TextBox -->
+        <Style x:Key="TextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource TextFont}">
+            <Setter Property="Background" Value="#FF7FF077"/>
+            <Setter Property="Padding" Value="-1"/>
+            <Setter Property="Margin" Value="-1"/>
+            <Setter Property="BorderThickness" Value="0"/>
         </Style>
         <!-- общий стиль кнопок (отступ, рамка, при наведении курсора) -->
-        <Style x:Key="StyleButton" TargetType="Button">
+        <Style x:Key="StyleButton" TargetType="Button" BasedOn="{StaticResource TextFont}">
             <Setter Property="Margin" Value="2,5"/>
             <Setter Property="Padding" Value="15"/>
-            <Setter Property="FontFamily" Value="Arial"/>
-            <Setter Property="FontSize" Value="18"/>
-            <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">

@@ -34,7 +34,7 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                
+
                 <!-- статистика и настройка тренажера -->
                 <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TextFont}">
                     <Run>Скорость: </Run>
@@ -61,21 +61,21 @@
                 <Button Grid.Row="1" Grid.Column="3" Style="{StaticResource ColorButtonGrey}"
                         Content="Stop" FontSize="24" FontWeight="Bold" IsEnabled="False" Background="Gainsboro" Foreground="#FFBBBBBB"/>
             </Grid>
-            
+
             <!-- текстовые поля ввода и вывода -->
-            <ProgressBar Name="progress" Grid.Row="1" Background="#FFE6F6F6"/>
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-
-                <TextBlock Name="OutputText" Grid.Row="0" Style="{StaticResource TextFont}"
-                           TextWrapping="Wrap" FontSize="20" VerticalAlignment="Center"/>
-                <TextBox Name="InputText" Grid.Row="1" Background="Transparent" IsEnabled="False"
-                         BorderBrush="Transparent"
-                         FontFamily="Arial" FontSize="18" FontWeight="Bold"
-                         VerticalAlignment="Center"/>
+                
+                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                    <TextBox x:Name="ReInputText" Style="{StaticResource TextBoxStyle}" Foreground="Transparent"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <TextBox x:Name="InputText" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <TextBlock x:Name="OutputText" Grid.Row="0" Style="{StaticResource TextFont}"/>
             </Grid>
         </Grid>
 
@@ -235,7 +235,7 @@
                 <Button Grid.Column="0" Name="LeftCtrl" Style="{DynamicResource ColorButtonGrey}"/>
                 <Button Grid.Column="1" Name="LWin" Style="{DynamicResource ColorButtonGrey}"/>
                 <Button Grid.Column="2" Name="LeftAlt" Style="{DynamicResource ColorButtonGrey}"/>
-                <Button Grid.Column="3" Name="Space" Style="{DynamicResource ColorButtonOrange}"/>
+                <Button Grid.Column="3" Name="Space" Style="{DynamicResource ColorButtonOrange}" KeyDown="Window_KeyDown"/>
                 <Button Grid.Column="4" Name="RightAlt" Style="{DynamicResource ColorButtonGrey}"/>
                 <Button Grid.Column="5" Name="RWin" Style="{DynamicResource ColorButtonGrey}"/>
                 <Button Grid.Column="6" Name="RightCtrl" Style="{DynamicResource ColorButtonGrey}"/>

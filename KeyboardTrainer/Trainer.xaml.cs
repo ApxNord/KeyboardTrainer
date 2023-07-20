@@ -64,7 +64,7 @@ namespace KeyboardTrainer
                         if (OutputText.Text[index] == char.Parse(button.Content.ToString()))
                         {
                             InputText.Text += button.Content.ToString();
-                            progress.Value+=0.5;
+                            ReInputText.Text += button.Content.ToString();
                             index++;
                         }
                         break;
@@ -103,9 +103,9 @@ namespace KeyboardTrainer
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
+            Space.Focus();
             if (OutputText != null) OutputText.Text = "";
             OutputText.Text += Stat.GenerationRandomText();
-            progress.Maximum = OutputText.Text.Length;
         }
     }
 }
