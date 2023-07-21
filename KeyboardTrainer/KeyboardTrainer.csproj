@@ -55,17 +55,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Properties\CharacterLower.Designer.cs">
+    <Compile Include="Models\ButtonModel.cs" />
+    <Compile Include="ViewModels\ButtonViewModel.cs" />
+    <Compile Include="Resources\CharacterLower.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CharacterLower.resx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\CharacterUpper.Designer.cs">
+    <Compile Include="Resources\CharacterUpper.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CharacterUpper.resx</DependentUpon>
     </Compile>
-    <Compile Include="Statistic.cs" />
+    <Compile Include="Models\StatisticModel.cs" />
+    <Compile Include="ViewModels\StatisticViewModel.cs" />
     <Compile Include="Trainer.xaml.cs">
       <DependentUpon>Trainer.xaml</DependentUpon>
     </Compile>
@@ -100,12 +103,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Properties\CharacterLower.resx">
+    <EmbeddedResource Include="Resources\CharacterLower.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>CharacterLower.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\CharacterUpper.resx">
+    <EmbeddedResource Include="Resources\CharacterUpper.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CharacterUpper.Designer.cs</LastGenOutput>
     </EmbeddedResource>
