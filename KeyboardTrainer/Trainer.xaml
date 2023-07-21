@@ -37,17 +37,17 @@
                 <!-- статистика и настройка тренажера -->
                 <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TextFont}">
                     <Run>Скорость: </Run>
-                    <Run Text="{Binding Stat.Speed}"></Run>
+                    <Run Text="{Binding StatisticViewModel.StatisticModel.Speed}"></Run>
                     <Run> символ/мин</Run>
                 </TextBlock>
                 <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TextFont}">
                     <Run>Ошибки: </Run>
-                    <Run Text="{Binding Stat.Fails}"/>
+                    <Run Text="{Binding StatisticViewModel.StatisticModel.Fails}"/>
                 </TextBlock>
                 <UniformGrid Grid.Row="0" Grid.Column="2">
                     <TextBlock  Style="{StaticResource TextFont}">
                         <Run>Длина слов: </Run>
-                        <Run Text="{Binding Stat.Diff}"/>
+                        <Run Text="{Binding StatisticViewModel.StatisticModel.Diff}"/>
                     </TextBlock>
                     <Slider Name="slider" Minimum="3" SmallChange="1" Value="5" ValueChanged="Slider_ValueChanged"/>
                 </UniformGrid>
