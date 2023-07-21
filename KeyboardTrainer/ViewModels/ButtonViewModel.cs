@@ -7,7 +7,9 @@ using System.Reflection;
 using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace KeyboardTrainer
 {
@@ -15,30 +17,50 @@ namespace KeyboardTrainer
     {
         private ResourceManager _upperChar; // файл ресурсов верхнего регистра
         private ResourceManager _lowerChar; // файл ресурсов нижнего регистра
-        public ObservableCollection<ButtonModel> ButtonCollection { get; set; }
-        
+        public Dictionary<string, ButtonModel> Buttons { get; set; }
+        private Dictionary<ButtonModel, Style> _originalButtonStyle;
         public ButtonViewModel(Grid grid)
         {
-            ButtonCollection = new ObservableCollection<ButtonModel>();
+            Buttons = new Dictionary<string, ButtonModel>();
+            _originalButtonStyle = new Dictionary<ButtonModel, Style>();
             _upperChar = new ResourceManager("KeyboardTrainer.Resources.CharacterUpper", Assembly.GetExecutingAssembly());
             _lowerChar = new ResourceManager("KeyboardTrainer.Resources.CharacterLower", Assembly.GetExecutingAssembly());
-            
+
             foreach (Grid b in grid.Children)
                 foreach (Button button in b.Children)
-                    ButtonCollection.Add(new ButtonModel
-                    {
-                        Button = button
-                    });
+                {
+                    Buttons.Add(button.Name, new ButtonModel() { Button = button });
+                }
 
-            ButtonContentInitialization(_lowerChar);
+
+            ButtonContentInitialization();
         }
-        public void ButtonContentInitialization(ResourceManager resource)
+        public void ButtonContentInitialization(bool isUpper = false)
         {
-            for (int i = 0; i < ButtonCollection.Count; i++)
+            ResourceManager resource = (isUpper) ? _upperChar : _lowerChar;
+            for (int i = 0; i < Buttons.Count; i++)
+                Buttons[Buttons.Keys.ElementAt(i)].Button.Content =
+                    resource.GetString(Buttons[Buttons.Keys.ElementAt(i)].Button.Name);
+        }
+        public void PressButtonDown(Key key)
+        {
+
+            if (!_originalButtonStyle.ContainsKey(Buttons[key.ToString()]))
+                _originalButtonStyle.Add(Buttons[key.ToString()],
+                    Buttons[key.ToString()].Button.Style);
+
+            Buttons[key.ToString()].Button.Style =
+                (Style)Application.Current.Resources["PressButtonColor"];
+
+        }
+        public void PressButtonUp(Key key)
+        {
+            if (_originalButtonStyle.ContainsKey(Buttons[key.ToString()]))
             {
-                ButtonCollection[i].Button.Content = resource.GetString(ButtonCollection[i].Button.Name);
+                Buttons[key.ToString()].Button.Style =
+                    _originalButtonStyle[Buttons[key.ToString()]];
+                _originalButtonStyle.Remove(Buttons[key.ToString()]);
             }
         }
-
     }
 }
