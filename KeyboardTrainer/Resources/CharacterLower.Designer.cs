@@ -538,7 +538,7 @@ namespace KeyboardTrainer.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Tad.
+        ///   Ищет локализованную строку, похожую на     .
         /// </summary>
         public static string Tab {
             get {

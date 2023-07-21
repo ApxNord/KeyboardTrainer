@@ -17,6 +17,7 @@ namespace KeyboardTrainer
         public ButtonViewModel ButtonViewModel { get; set; }
         public StatisticViewModel StatisticViewModel { get; set; }
 
+        private bool _isCaps = false;
         public Trainer()
         {
             InitializeComponent();
@@ -36,11 +37,28 @@ namespace KeyboardTrainer
         }
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            if (e.Key == Key.System) // Alt
+            {
+                ButtonViewModel.PressButtonDown(e.SystemKey);
+                return;
+            }
+            if (e.Key == Key.Capital) // CapsLock
+            {
+                _isCaps = !_isCaps;
+                ButtonViewModel.ButtonContentInitialization(_isCaps);
+            }        
+
+            ButtonViewModel.PressButtonDown(e.Key);
 
         }
         private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
         {
-
+            if (e.Key == Key.System)
+            {
+                ButtonViewModel.PressButtonUp(e.SystemKey);
+                return;
+            }
+            ButtonViewModel.PressButtonUp(e.Key);
         }
 
     }
