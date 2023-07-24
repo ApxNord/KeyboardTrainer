@@ -25,6 +25,7 @@ namespace KeyboardTrainer
             InitializeComponent();
             Trainer t = new Trainer();
             t.Show();
+            this.Hide();
         }
     }
 }

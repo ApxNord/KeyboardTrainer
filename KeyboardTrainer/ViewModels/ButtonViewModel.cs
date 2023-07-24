@@ -42,7 +42,7 @@ namespace KeyboardTrainer
                 Buttons[Buttons.Keys.ElementAt(i)].Button.Content =
                     resource.GetString(Buttons[Buttons.Keys.ElementAt(i)].Button.Name);
         }
-        public void PressButtonDown(Key key)
+        public string PressButtonDown(Key key)
         {
 
             if (!_originalButtonStyle.ContainsKey(Buttons[key.ToString()]))
@@ -52,6 +52,7 @@ namespace KeyboardTrainer
             Buttons[key.ToString()].Button.Style =
                 (Style)Application.Current.Resources["PressButtonColor"];
 
+            return Buttons[key.ToString()].Button.Content.ToString();
         }
         public void PressButtonUp(Key key)
         {

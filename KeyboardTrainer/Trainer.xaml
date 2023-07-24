@@ -69,12 +69,16 @@
                 </Grid.RowDefinitions>
                 
                 <StackPanel Grid.Row="0" Orientation="Horizontal">
-                    <TextBox x:Name="ReInputText" Style="{StaticResource TextBoxStyle}" Foreground="Transparent"/>
+                    <TextBox x:Name="ReInputText" Style="{StaticResource TextBoxStyle}" 
+                             Foreground="Transparent"
+                             Text="{Binding TextViewModel.TextModel.InText}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="1" Orientation="Horizontal">
-                    <TextBox x:Name="InputText" Style="{StaticResource TextBoxStyle}"/>
+                    <TextBox x:Name="InputText" Style="{StaticResource TextBoxStyle}"
+                             Text="{Binding TextViewModel.TextModel.InText}"/>
                 </StackPanel>
-                <TextBlock x:Name="OutputText" Grid.Row="0" Style="{StaticResource TextFont}"/>
+                <TextBlock x:Name="OutputText" Grid.Row="0" Style="{StaticResource TextFont}"
+                           Text="{Binding TextViewModel.TextModel.OutText}"/>
             </Grid>
         </Grid>
 

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using KeyboardTrainer.ViewModels;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Reflection;
 using System.Resources;
@@ -16,6 +17,7 @@ namespace KeyboardTrainer
     {
         public ButtonViewModel ButtonViewModel { get; set; }
         public StatisticViewModel StatisticViewModel { get; set; }
+        public TextViewModel TextViewModel { get; set; }
 
         private bool _isCaps = false;
         public Trainer()
@@ -23,17 +25,22 @@ namespace KeyboardTrainer
             InitializeComponent();
             ButtonViewModel = new ButtonViewModel(KeyBoardGrid);
             StatisticViewModel = new StatisticViewModel();
+            TextViewModel = new TextViewModel();
+
+            StatisticViewModel.StatisticModel.Diff = (int)slider.Value;
 
             DataContext = this;
         }
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-
+            if (StatisticViewModel != null)
+                StatisticViewModel.StatisticModel.Diff = (int)slider.Value;
         }
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-
+            TextViewModel.GenerationRandomText(StatisticViewModel.StatisticModel.Diff);
+            InputText.Clear();
         }
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
@@ -46,9 +53,9 @@ namespace KeyboardTrainer
             {
                 _isCaps = !_isCaps;
                 ButtonViewModel.ButtonContentInitialization(_isCaps);
-            }        
+            }
 
-            ButtonViewModel.PressButtonDown(e.Key);
+            TextViewModel.CorrectText(ButtonViewModel.PressButtonDown(e.Key));
 
         }
         private void Window_PreviewKeyUp(object sender, KeyEventArgs e)

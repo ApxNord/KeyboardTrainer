@@ -56,6 +56,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\ButtonModel.cs" />
+    <Compile Include="Models\TextModel.cs" />
     <Compile Include="ViewModels\ButtonViewModel.cs" />
     <Compile Include="Resources\CharacterLower.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -72,6 +73,7 @@
     <Compile Include="Trainer.xaml.cs">
       <DependentUpon>Trainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\TextViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
