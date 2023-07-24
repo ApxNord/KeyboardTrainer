@@ -32,13 +32,19 @@ namespace KeyboardTrainer.ViewModels
                 if (i != 9) TextModel.OutText += " ";
             }
         }
-        public void CorrectText(string c)
+        public bool IsCorrectText(string c)
         {
             if (TextModel.OutText[i] == char.Parse(c))
             {
                 TextModel.InText += c;
                 i++;
+                return true;
             }
+            return false;
+        }
+        public bool IsFinishText()
+        {
+            return (TextModel.InText.Length == TextModel.OutText.Length) ? true : false;
         }
     }
 }

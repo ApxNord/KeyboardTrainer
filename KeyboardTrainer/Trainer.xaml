@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Trainer" Height="600" Width="1200"
         Background="#FFF6F6F6" WindowStartupLocation="CenterScreen" ForceCursor="True"
-        ResizeMode="NoResize" PreviewKeyDown="Window_PreviewKeyDown" PreviewKeyUp="Window_PreviewKeyUp"
+        ResizeMode="NoResize" PreviewKeyDown="Window_PreviewKeyDown" PreviewKeyUp="Window_PreviewKeyUp" Loaded="Window_Loaded"
         >
     <Grid>
         <Grid.RowDefinitions>

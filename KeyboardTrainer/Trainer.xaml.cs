@@ -1,12 +1,14 @@
 ﻿using KeyboardTrainer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Reflection;
 using System.Resources;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-
+using System.Windows.Threading;
 
 namespace KeyboardTrainer
 {
@@ -15,6 +17,7 @@ namespace KeyboardTrainer
     /// </summary>
     public partial class Trainer : Window
     {
+        private Stopwatch timer;
         public ButtonViewModel ButtonViewModel { get; set; }
         public StatisticViewModel StatisticViewModel { get; set; }
         public TextViewModel TextViewModel { get; set; }
@@ -28,6 +31,7 @@ namespace KeyboardTrainer
             TextViewModel = new TextViewModel();
 
             StatisticViewModel.StatisticModel.Diff = (int)slider.Value;
+            timer = new Stopwatch();
 
             DataContext = this;
         }
@@ -41,9 +45,12 @@ namespace KeyboardTrainer
         {
             TextViewModel.GenerationRandomText(StatisticViewModel.StatisticModel.Diff);
             InputText.Clear();
+            StatisticViewModel.StatisticModel.Fails = 0;
+            timer.Start();
         }
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            Space.Focus();
             if (e.Key == Key.System) // Alt
             {
                 ButtonViewModel.PressButtonDown(e.SystemKey);
@@ -55,8 +62,14 @@ namespace KeyboardTrainer
                 ButtonViewModel.ButtonContentInitialization(_isCaps);
             }
 
-            TextViewModel.CorrectText(ButtonViewModel.PressButtonDown(e.Key));
+            if (!TextViewModel.IsCorrectText(ButtonViewModel.PressButtonDown(e.Key)))
+                StatisticViewModel.StatisticModel.Fails++;
 
+            if (TextViewModel.IsFinishText())
+            {
+                MessageBox.Show("End!");
+                timer.Stop();
+            }          
         }
         private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
         {
@@ -68,5 +81,12 @@ namespace KeyboardTrainer
             ButtonViewModel.PressButtonUp(e.Key);
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+           DispatcherTimer t = new DispatcherTimer();
+            t.Interval = TimeSpan.FromSeconds(1);
+            t.Tick += (s, args) => StatisticViewModel.StatisticModel.Speed = InputText.Text.Length / ((int)timer.Elapsed.TotalMinutes + 1);
+            t.Start();          
+        }
     }
 }
