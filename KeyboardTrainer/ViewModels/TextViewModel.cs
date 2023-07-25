@@ -56,7 +56,7 @@ namespace KeyboardTrainer.ViewModels
                     return true;
                 }
                 
-            }catch (FormatException e) { }
+            }catch (FormatException e) { throw; }
             
             return false;
         }

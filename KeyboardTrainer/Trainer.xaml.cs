@@ -63,14 +63,17 @@ namespace KeyboardTrainer
                 ButtonViewModel.PressButtonDown(e.SystemKey);
                 return;
             }
-            if (e.Key == Key.Capital) // CapsLock
+            if (e.Key == Key.Capital || e.Key == Key.LeftShift || e.Key == Key.RightShift) // CapsLock and Shift
             {
                 _isCaps = !_isCaps;
                 ButtonViewModel.ButtonContentInitialization(_isCaps);
             }
-
-            if (!TextViewModel.IsCorrectText(ButtonViewModel.PressButtonDown(e.Key)))
-                StatisticViewModel.StatisticModel.Fails++;
+            try
+            {
+                if (!TextViewModel.IsCorrectText(ButtonViewModel.PressButtonDown(e.Key)))
+                    StatisticViewModel.StatisticModel.Fails++;
+            }
+            catch { }
 
             if (TextViewModel.IsFinishText())
             {
@@ -80,7 +83,12 @@ namespace KeyboardTrainer
         }
         private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
         {
-                ButtonViewModel.PressButtonUp((e.Key == Key.System)?e.SystemKey: e.Key);
+            if (e.Key == Key.LeftShift || e.Key == Key.RightShift)
+            {
+                _isCaps = !_isCaps;
+                ButtonViewModel.ButtonContentInitialization(_isCaps);
+            }
+            if((e.Key != Key.Capital && _isCaps) || !_isCaps) ButtonViewModel.PressButtonUp((e.Key == Key.System)?e.SystemKey: e.Key);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
