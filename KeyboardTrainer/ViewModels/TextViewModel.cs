@@ -11,35 +11,53 @@ namespace KeyboardTrainer.ViewModels
     public class TextViewModel
     {
         private int i = 0;
+        private readonly int _wordCount = 10;
+        private readonly int[] _onlyLowerText = { 97, 123 };
+        private readonly int[] _onlyUpperText = { 65, 91 };
         public TextModel TextModel { get; set; }
         public TextViewModel()
         {
             TextModel = new TextModel();
         }
 
-        public void GenerationRandomText(int length)
+        public void GenerationRandomText(int length, bool isWithUpper)
         {
-            TextModel.InText = "";
-            TextModel.OutText = "";
-            int[] onlyLowerText = { 97, 123 };
+            TextModel.InText = string.Empty;
+            TextModel.OutText = string.Empty;
+            
+            int u = isWithUpper ? 2 : 1;
+
             Random random = new Random();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < _wordCount; i++)
             {
-                for (int j = 0; j < length; j++)
+                int l = random.Next(3, length+1);
+                for (int j = 0; j < l; j++)
                 {
-                    TextModel.OutText += (char)random.Next(onlyLowerText[0], onlyLowerText[1]);
+                    if (random.Next(u) == 0)
+                    {
+                        TextModel.OutText += (char)random.Next(_onlyLowerText[0], _onlyLowerText[1]);
+                    }
+                    else
+                    {
+                        TextModel.OutText += (char)random.Next(_onlyUpperText[0], _onlyUpperText[1]);
+                    }
                 }
                 if (i != 9) TextModel.OutText += " ";
             }
         }
         public bool IsCorrectText(string c)
         {
-            if (TextModel.OutText[i] == char.Parse(c))
+            try
             {
-                TextModel.InText += c;
-                i++;
-                return true;
-            }
+                if (TextModel.OutText[i] == char.Parse(c))
+                {
+                    TextModel.InText += c;
+                    i++;
+                    return true;
+                }
+                
+            }catch (FormatException e) { }
+            
             return false;
         }
         public bool IsFinishText()

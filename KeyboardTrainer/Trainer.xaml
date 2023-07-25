@@ -51,7 +51,7 @@
                     </TextBlock>
                     <Slider Name="slider" Minimum="3" SmallChange="1" Value="5" ValueChanged="Slider_ValueChanged"/>
                 </UniformGrid>
-                <CheckBox Grid.Row="0" Grid.Column="3">
+                <CheckBox Name="UpperCheckBox" Grid.Row="0" Grid.Column="3" IsChecked="False">
                     <TextBlock  Style="{StaticResource TextFont}" Text="Учет регистра"/>
                 </CheckBox>
 

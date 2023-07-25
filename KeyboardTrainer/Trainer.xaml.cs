@@ -43,7 +43,7 @@ namespace KeyboardTrainer
         }
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            TextViewModel.GenerationRandomText(StatisticViewModel.StatisticModel.Diff);
+            TextViewModel.GenerationRandomText(StatisticViewModel.StatisticModel.Diff, (bool)UpperCheckBox.IsChecked);
             InputText.Clear();
             StatisticViewModel.StatisticModel.Fails = 0;
             timer.Start();
