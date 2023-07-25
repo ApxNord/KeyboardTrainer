@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+//using System.Media;
 using System.Reflection;
 using System.Resources;
 using System.Windows;
@@ -22,6 +23,8 @@ namespace KeyboardTrainer
         public StatisticViewModel StatisticViewModel { get; set; }
         public TextViewModel TextViewModel { get; set; }
 
+        private SoundViewModel _soundClick;
+              
         private bool _isCaps = false;
         public Trainer()
         {
@@ -30,9 +33,10 @@ namespace KeyboardTrainer
             StatisticViewModel = new StatisticViewModel();
             TextViewModel = new TextViewModel();
 
+            _soundClick = new SoundViewModel();
+
             StatisticViewModel.StatisticModel.Diff = (int)slider.Value;
             timer = new Stopwatch();
-
             DataContext = this;
         }
 
@@ -57,6 +61,7 @@ namespace KeyboardTrainer
         }
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            _soundClick.PlaySoundClickButton();
             Space.Focus();
             if (e.Key == Key.System) // Alt
             {

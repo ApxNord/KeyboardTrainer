@@ -56,12 +56,15 @@ namespace KeyboardTrainer
         }
         public void PressButtonUp(Key key)
         {
-            if (_originalButtonStyle.ContainsKey(Buttons[key.ToString()]))
+            try
             {
-                Buttons[key.ToString()].Button.Style =
-                    _originalButtonStyle[Buttons[key.ToString()]];
-                _originalButtonStyle.Remove(Buttons[key.ToString()]);
-            }
+                if (_originalButtonStyle.ContainsKey(Buttons[key.ToString()]))
+                {
+                    Buttons[key.ToString()].Button.Style =
+                        _originalButtonStyle[Buttons[key.ToString()]];
+                    _originalButtonStyle.Remove(Buttons[key.ToString()]);
+                }
+            } catch (KeyNotFoundException e) { }
         }
     }
 }
