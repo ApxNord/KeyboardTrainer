@@ -47,6 +47,13 @@ namespace KeyboardTrainer
             InputText.Clear();
             StatisticViewModel.StatisticModel.Fails = 0;
             timer.Start();
+
+            StopButton.IsEnabled = true;
+            StopButton.Style = (Style)Application.Current.Resources["EnabledColorButton"];
+            StartButton.IsEnabled = false;
+
+            PreviewKeyDown += Window_PreviewKeyDown;
+            PreviewKeyUp += Window_PreviewKeyUp;
         }
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
@@ -73,12 +80,7 @@ namespace KeyboardTrainer
         }
         private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.System)
-            {
-                ButtonViewModel.PressButtonUp(e.SystemKey);
-                return;
-            }
-            ButtonViewModel.PressButtonUp(e.Key);
+                ButtonViewModel.PressButtonUp((e.Key == Key.System)?e.SystemKey: e.Key);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -87,6 +89,18 @@ namespace KeyboardTrainer
             t.Interval = TimeSpan.FromSeconds(1);
             t.Tick += (s, args) => StatisticViewModel.StatisticModel.Speed = InputText.Text.Length / ((int)timer.Elapsed.TotalMinutes + 1);
             t.Start();          
+        }
+
+        private void StopButton_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Stop();
+            StartButton.Style = (Style)Application.Current.Resources["EnabledColorButton"];
+            StopButton.Style = (Style)Application.Current.Resources["NotEnabledColorButton"];
+            StopButton.IsEnabled = false;
+            StartButton.IsEnabled = true;
+
+            PreviewKeyDown -= Window_PreviewKeyDown;
+            PreviewKeyUp -= Window_PreviewKeyUp;
         }
     }
 }

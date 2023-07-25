@@ -72,6 +72,16 @@
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="FontWeight" Value="Light"/>
         </Style>
+        <Style x:Key="EnabledColorButton" TargetType="Button" BasedOn="{StaticResource StyleButton}">
+            <Setter Property="Background" Value="#FFB5B5B5"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            
+        </Style>
+        <Style x:Key="NotEnabledColorButton" TargetType="Button" BasedOn="{StaticResource EnabledColorButton}">
+            <Setter Property="Background" Value="Gainsboro"/>
+            <Setter Property="Foreground" Value="#FFBBBBBB"/>
+        </Style>
         <!-- для пробела -->
         <Style x:Key="ColorButtonOrange" TargetType="Button" BasedOn="{StaticResource StyleButton}">
             <Setter Property="Background" Value="#FFA502"/>
